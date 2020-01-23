@@ -99,7 +99,6 @@ func uploadHandler(writer http.ResponseWriter, request *http.Request){
 		} 
 		defer cleanup(dstPath)
 	} else {
-		log.Print(fmt.Sprintf("%s already exists",dstFile))
 	}
 	fmt.Fprintf(writer, filehashDigest)
 }
